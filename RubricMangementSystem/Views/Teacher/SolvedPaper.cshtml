@@ -1,0 +1,81 @@
+﻿@model IEnumerable<RubricsystemModel.Model.Answer>
+
+@{
+    ViewData["Title"] = "SolvedPaper";
+    Layout = "~/Views/Shared/_TeacherTheme.cshtml";
+}
+
+<div class="nk-content ">
+    <div class="container-fluid">
+        <div class="nk-content-inner">
+            <div class="nk-content-body">
+                <div class="components-preview wide-md mx-auto">
+                    <div class="nk-block nk-block-lg">
+
+                        <div class="card card-preview">
+                            <div class="card-inner">
+                                <table class="datatable-init table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Class)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Section)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.IsSolved)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.IsChecked)
+                                            </th>
+
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.StudentId)
+                                            </th>
+
+                                            <th>
+                                                Actions
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Class)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Section)
+                                            </td>
+
+
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.IsSolved)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.IsChecked)
+                                            </td>
+
+
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.StudentId)
+                                            </td>
+
+                                            <td>
+                                                <a asp-action="GetPaper" asp-route-id="@item.StudentId">Check Paper</a>
+
+                                            </td>
+                                        </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7de41e6f-8a80-4e81-95a0-18c576c42095": {
+      "ProjectGuid": "7de41e6f-8a80-4e81-95a0-18c576c42095",
+      "DisplayName": "RubricMangementSystem",
+      "ColorIndex": 0
+    },
+    "ee241f57-f8e6-4d32-b082-d7523542cbb5": {
+      "ProjectGuid": "ee241f57-f8e6-4d32-b082-d7523542cbb5",
+      "DisplayName": "RubricsystemModel",
+      "ColorIndex": 1
+    },
+    "c5a031a7-badb-414b-be36-cfa0c72e479d": {
+      "ProjectGuid": "c5a031a7-badb-414b-be36-cfa0c72e479d",
+      "DisplayName": "RubricSystem.Business",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 3
+}

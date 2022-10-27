@@ -1,0 +1,74 @@
+﻿@model IEnumerable<RubricsystemModel.Model.Student>
+
+@{
+    ViewData["Title"] = "GetAllStudents";
+    Layout = "~/Views/Shared/_StudentTheme.cshtml";
+}
+
+
+<div class="nk-content ">
+    <div class="container-fluid">
+        <div class="nk-content-inner">
+            <div class="nk-content-body">
+                <div class="components-preview wide-md mx-auto">
+                    <div class="nk-block nk-block-lg">
+                        <!--<div class="nk-block-head">
+                            <div class="nk-block-head-content">-->
+                                @*<h4 class="nk-block-title">Data Table</h4>*@
+                                <!--<a asp-action="#" asp-controller="#" class="btn btn-primary">Add Student</a>
+
+                            </div>
+                        </div>-->
+                        <div class="card card-preview">
+                            <div class="card-inner">
+                                <table class="datatable-init table">
+                                    <thead>
+                                        <tr>
+                                           
+                                            <th>Name</th>
+                                            <th>Class</th>
+                                            <th>Section</th>
+                                            
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Name)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Class)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Section)
+                                                </td>
+                                                
+                                                <td>
+                                                    <a asp-action="Edit" asp-route-id="@item.StudentId" data-toggle="tooltip" data-placement="top" title="Edit User"><em class="icon ni ni-edit"></em></a> |
+                                                    <a asp-action="Delete" asp-route-id="@item.StudentId" data-toggle="tooltip" data-placement="top" title="Delete User"><em class="icon ni ni-delete"></em></a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div><!-- .card-preview -->
+                    </div> <!-- nk-block -->
+                    <!-- nk-block -->
+
+                </div><!-- .components-preview -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+

@@ -1,0 +1,143 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using RubricsystemModel.Model
+@inject SignInManager<ApplicationUser> signInManager;
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+
+<head>
+    <base href=".~/Theme/">
+    <meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="~/Theme/images/favicon.png">
+    <!-- Page Title  -->
+    <title>SaaS Dashboard | DashLite Admin Template</title>
+    <!-- StyleSheets  -->
+    <link rel="stylesheet" href="~/Theme/assets/css/dashlite.css?ver=2.8.0">
+    <link id="skin-default" rel="stylesheet" href="~/Theme/assets/css/theme.css?ver=2.8.0">
+</head>
+
+<body class="nk-body bg-white npc-default has-aside ">
+    <div class="nk-app-root">
+
+        <div class="nk-main ">
+
+            <div class="nk-wrap ">
+                <div class="nk-header nk-header-fixed is-light">
+                    <div class="container-lg wide-xl">
+                        <div class="nk-header-wrap">
+                            <div class="nk-header-brand">
+                                <a href="html/index.html" class="logo-link">
+                                    <img class="logo-light logo-img" src="~/Theme/images/logo.png" srcset="~/Theme/images/logo2x.png 2x" alt="logo">
+                                    <img class="logo-dark logo-img" src="~/Theme/images/logo-dark.png" srcset="~/Theme/images/logo-dark2x.png 2x" alt="logo-dark">
+                                </a>
+                            </div><!-- .nk-header-brand -->
+                            <div class="nk-header-menu">
+                                <ul class="nk-menu nk-menu-main">
+                                    <li class="nk-menu-item">
+                                        <a href="html/index.html" class="nk-menu-link">
+                                            <span class="nk-menu-text">Overview</span>
+                                        </a>
+                                    </li><!-- .nk-menu-item -->
+                                    <li class="nk-menu-item has-sub">
+                                        <a href="#" class="nk-menu-link nk-menu-toggle">
+                                            <span class="nk-menu-text">Apps</span>
+                                        </a>
+                                        <ul class="nk-menu-sub">
+                                            <li class="nk-menu-item">
+                                                <a href="html/apps-messages.html" class="nk-menu-link"><span class="nk-menu-text">Messages</span></a>
+                                            </li>
+                                            <li class="nk-menu-item">
+                                                <a href="html/apps-inbox.html" class="nk-menu-link"><span class="nk-menu-text">Inbox / Mail</span></a>
+                                            </li>
+                                            <li class="nk-menu-item">
+                                                <a href="html/apps-file-manager.html" class="nk-menu-link"><span class="nk-menu-text">File Manager</span></a>
+                                            </li>
+                                            <li class="nk-menu-item">
+                                                <a href="html/apps-chats.html" class="nk-menu-link"><span class="nk-menu-text">Chats / Messenger</span></a>
+                                            </li>
+                                            <li class="nk-menu-item">
+                                                <a href="html/apps-calendar.html" class="nk-menu-link"><span class="nk-menu-text">Calendar</span><span class="nk-menu-badge">New</span></a>
+                                            </li>
+                                            <li class="nk-menu-item">
+                                                <a href="html/apps-kanban.html" class="nk-menu-link"><span class="nk-menu-text">Kanban Board</span><span class="nk-menu-badge">New</span></a>
+                                            </li>
+                                        </ul><!-- .nk-menu-sub -->
+                                    </li><!-- .nk-menu-item -->
+                                    <li class="nk-menu-item">
+                                        <a href="html/components.html" class="nk-menu-link">
+                                            <span class="nk-menu-text">Components</span>
+                                        </a>
+                                    </li><!-- .nk-menu-item -->
+                                    <li class="nk-menu-item">
+                                        <a href="html/support-kb.html" class="nk-menu-link">
+                                            <span class="nk-menu-text">Support</span>
+                                        </a>
+                                    </li><!-- .nk-menu-item -->
+                                    <li class="nk-menu-item">
+                                        <a href="html/pages/contact.html" class="nk-menu-link">
+                                            <span class="nk-menu-text">Contact</span>
+                                        </a>
+                                    </li><!-- .nk-menu-item -->
+                                </ul><!-- .nk-menu -->
+                            </div><!-- .nk-header-menu -->                          
+
+                            <div class="nk-header-tools">
+                                <ul class="nk-quick-nav">
+                                    <li class="dropdown notification-dropdown">
+                                        <a asp-action="Login" asp-controller="Accounts" class="btn btn-primary">
+                                            Login
+                                        </a>
+                                    </li><!-- .dropdown -->
+                                </ul><!-- .nk-quick-nav -->
+                            </div>
+
+
+                        </div><!-- .nk-header-wrap -->
+                    </div><!-- .container-fliud -->
+                </div>
+
+                <div class="">
+                    <div class="container wide-xl">
+                        <div class="nk-content-inner">
+
+                            <div class="nk-content-body">
+
+                                @RenderBody()
+                                <!-- footer  -->
+                                <div class="nk-footer">
+                                    <div class="container wide-xl">
+                                        <div class="nk-footer-wrap g-2">
+                                            <div class="nk-footer-copyright">
+                                                &copy; 2020 DashLite. Template by <a href="#">Softnio</a>
+                                            </div>
+                                            <div class="nk-footer-links">
+                                                <ul class="nav nav-sm">
+                                                    <li class="nav-item"><a class="nav-link" href="#">Terms</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="#">Privacy</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- footer  -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content  -->
+            </div>
+            <!-- wrap  -->
+        </div>
+        <!-- main  -->
+    </div>
+    <!-- app-root  -->
+    <!-- JavaScript -->
+    <script src="~/Theme/assets/js/bundle.js?ver=2.8.0"></script>
+    <script src="~/Theme/assets/js/scripts.js?ver=2.8.0"></script>
+    <script src="~/Theme/assets/js/charts/gd-default.js?ver=2.8.0"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

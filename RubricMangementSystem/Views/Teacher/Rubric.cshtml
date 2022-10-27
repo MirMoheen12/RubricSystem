@@ -1,0 +1,205 @@
+﻿@model RubricsystemModel.Model.FormDto
+
+@{
+    ViewData["Title"] = "Rubric";
+    Layout = "~/Views/Shared/_TeacherTheme.cshtml";
+}
+
+<div class="nk-content ">
+    <div class="container-fluid">
+        <div class="nk-content-inner">
+            <div class="nk-content-body">
+                <div class="components-preview wide-md mx-auto">
+
+                    <div class="nk-block nk-block-lg">
+                        <div class="card">
+                            <div class="card-inner">
+                                <form asp-action="Rubric">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="row g-4">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Class" class="form-label">Select Class</label>
+                                                <div class="form-control-wrap">
+                                                    <select asp-for="Class" class="form-control">
+                                                        <option>Ist</option>
+                                                        <option>2nd</option>
+                                                        <option>3rd</option>
+                                                        <option>4th</option>
+                                                        <option>5th</option>
+                                                        <option>6th</option>
+                                                        <option>7th</option>
+                                                        <option>8th</option>
+                                                        <option>9th</option>
+                                                        <option>10th</option>
+                                                    </select>
+                                                    <span asp-validation-for="Class" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Section" class="form-label">Select Section</label>
+                                                <div class="form-control-wrap">
+                                                    <select asp-for="Section" class="form-control">
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                    </select>
+                                                    <span asp-validation-for="Section" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="card-head">
+                                                <h6 class="card-title">Voorbereiding</h6>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Subcat1" class="form-label">Subcategory</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Subcat1" class="form-control">
+                                                    <span asp-validation-for="Subcat1" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Subcat2" class="form-label">Subcategory</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Subcat2" class="form-control">
+                                                    <span asp-validation-for="Subcat2" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="card-head">
+                                                <h6 class="card-title">
+                                                    Professionele Vaardigheden
+                                                </h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Subcat3" class="form-label">Subcategory</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Subcat3" class="form-control">
+                                                    <span asp-validation-for="Subcat3" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Subcat4" class="form-label">Subcategory</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Subcat4" class="form-control">
+                                                    <span asp-validation-for="Subcat4" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Subcat5" class="form-label">Subcategory</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Subcat5" class="form-control">
+                                                    <span asp-validation-for="Subcat5" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Subcat6" class="form-label">Subcategory</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Subcat6" class="form-control">
+                                                    <span asp-validation-for="Subcat6" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Subcat7" class="form-label">Subcategory</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Subcat7" class="form-control">
+                                                    <span asp-validation-for="Subcat7" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="card-head">
+                                                <h6 class="card-title">Hard Skills</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Subcat8" class="form-label">Subcategory</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Subcat8" class="form-control">
+                                                    <span asp-validation-for="Subcat8" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Subcat9" class="form-label">Subcategory</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Subcat9" class="form-control">
+                                                    <span asp-validation-for="Subcat9" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Subcat10" class="form-label">Subcategory</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Subcat10" class="form-control">
+                                                    <span asp-validation-for="Subcat10" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="card-head">
+                                                <h6 class="card-title">Verslag & Nabespreking</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Subcat11" class="form-label">Subcategory</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Subcat11" class="form-control">
+                                                    <span asp-validation-for="Subcat11" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Subcat12" class="form-label">Subcategory</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Subcat12" class="form-control">
+                                                    <span asp-validation-for="Subcat12" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-lg btn-primary">Save Informations</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

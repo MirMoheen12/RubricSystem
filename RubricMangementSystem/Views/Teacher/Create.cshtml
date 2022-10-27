@@ -1,0 +1,109 @@
+﻿@model RubricsystemModel.Model.Teacher
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_TeacherTheme.cshtml";
+}
+
+<div class="nk-content ">
+    <div class="container-fluid">
+        <div class="nk-content-inner">
+            <div class="nk-content-body">
+                <div class="components-preview wide-md mx-auto">
+
+                    <div class="nk-block nk-block-lg">
+                        <div class="card">
+                            <div class="card-inner">
+                                @if (ViewBag.exist == true)
+                                {
+                                    <div class="example-alerts">
+                                        <div class="gy-4">
+                                            <div class="example-alert">
+                                                <div class="alert alert-info alert-icon alert-dismissible">
+                                                    <em class="icon ni ni-check-circle"></em> <strong>Alert !</strong> User information Already stored <button class="close" data-dismiss="alert"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                <div class="card-head">
+                                    <h5 class="card-title">Teacher Info</h5>
+                                </div>
+                                <form asp-action="Create">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="row g-4">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Name" class="form-label">Name *</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Name" class="form-control">
+                                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Department" class="form-label">Department *</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Department" class="form-control">
+                                                    <span asp-validation-for="Department" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Class" class="form-label">Class *</label>
+                                                <div class="form-control-wrap">
+                                                    <select asp-for="Class" class="form-control">
+                                                        <option>Ist</option>
+                                                        <option>2nd</option>
+                                                        <option>3rd</option>
+                                                        <option>4th</option>
+                                                        <option>5th</option>
+                                                        <option>6th</option>
+                                                        <option>7th</option>
+                                                        <option>8th</option>
+                                                        <option>9th</option>
+                                                        <option>10th</option>
+                                                    </select>
+                                                    <span asp-validation-for="Class" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Section" class="form-label">Section *</label>
+                                                <div class="form-control-wrap">
+                                                    <select asp-for="Section" class="form-control">
+                                                        <option>A</option>
+                                                        <option>B</option>
+                                                        <option>C</option>
+                                                        <option>D</option>
+                                                    </select>
+                                                    <span asp-validation-for="Section" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-lg btn-primary">Save Informations</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,61 @@
+﻿@model RubricsystemModel.Model.EvaluatieTask
+
+@{
+    ViewData["Title"] = "CreateEvaluatie";
+    Layout = "~/Views/Shared/_TeacherTheme.cshtml";
+}
+
+
+<div class="nk-content ">
+    <div class="container-fluid">
+        <div class="nk-content-inner">
+            <div class="nk-content-body">
+                <div class="components-preview wide-md mx-auto">
+
+                    <div class="nk-block nk-block-lg">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-head">
+                                    <h5 class="card-title">Evaluatie Info</h5>
+                                </div>
+                                <form asp-action="CreateEvaluatie">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="row g-4">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Question" class="form-label">Question</label>
+                                                <div class="form-control-wrap">
+                                                    <textarea asp-for="Question" class="form-control"></textarea>
+                                                    <span asp-validation-for="Question" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="RubricId" class="form-label">Subjects</label>
+                                                <div class="form-control-wrap">
+                                                    <select asp-for="RubricId" class="form-control" asp-items="ViewBag.Rubric"></select>
+                                                    <span asp-validation-for="RubricId" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-lg btn-primary">Save Informations</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

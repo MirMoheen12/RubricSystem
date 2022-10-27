@@ -1,0 +1,154 @@
+﻿@model RubricsystemModel.Model.Paper
+
+@{
+    ViewData["Title"] = "CreatePaper";
+    Layout = "~/Views/Shared/_TeacherTheme.cshtml";
+}
+
+<div class="nk-content ">
+    <div class="container-fluid">
+        <div class="nk-content-inner">
+            <div class="nk-content-body">
+                <div class="components-preview wide-md mx-auto">
+
+                    <div class="nk-block nk-block-lg">
+                        <div class="card">
+                            <div class="card-inner">
+                                @if (ViewBag.ok == "true")
+                                {
+                                    <div class="example-alerts">
+                                        <div class="gy-4">
+                                            <div class="example-alert">
+                                                <div class="alert alert-success alert-icon alert-dismissible">
+                                                    <em class="icon ni ni-check-circle"></em> <strong>Alert :</strong> paper has been created <button class="close" data-dismiss="alert"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                else if(ViewBag.ok == "false")
+                                {
+                                    <div class="example-alerts">
+                                        <div class="gy-4">
+                                            <div class="example-alert">
+                                                <div class="alert alert-danger alert-icon alert-dismissible">
+                                                    <em class="icon ni ni-check-circle"></em> <strong>Alert !</strong> Paper Already Created By You <button class="close" data-dismiss="alert"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                <div class="card-head">
+                                    <h5 class="card-title">Paper Info</h5>
+
+                                </div>
+
+
+                                <form method="post" asp-action="CreatePaper">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="row g-4">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Class" class="form-label">Class</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Class" id="Class" name="Class" class="form-control" readonly="readonly">
+                                                    <span asp-validation-for="Class" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <input asp-for="TeacherId" class="form-control" type="hidden" />
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Section" class="form-label">Section</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Section" id="Section" name="Section" class="form-control" readonly="readonly">
+                                                    <span asp-validation-for="Section" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Question1" class="form-label">Question 1</label>
+                                                <div class="form-control-wrap">
+                                                    <textarea asp-for="Question1" class="form-control"></textarea>
+                                                    <span asp-validation-for="Question1" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Question2" class="form-label">Question 2</label>
+                                                <div class="form-control-wrap">
+                                                    <textarea asp-for="Question2" class="form-control"></textarea>
+                                                    <span asp-validation-for="Question2" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Question3" class="form-label">Question 3</label>
+                                                <div class="form-control-wrap">
+                                                    <textarea asp-for="Question3" class="form-control"></textarea>
+                                                    <span asp-validation-for="Question3" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Question4" class="form-label">Question 4</label>
+                                                <div class="form-control-wrap">
+                                                    <textarea asp-for="Question4" class="form-control"></textarea>
+                                                    <span asp-validation-for="Question4" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Question5" class="form-label">Question 5</label>
+                                                <div class="form-control-wrap">
+                                                    <textarea asp-for="Question5" class="form-control"></textarea>
+                                                    <span asp-validation-for="Question5" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-lg btn-primary">Save Informations</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

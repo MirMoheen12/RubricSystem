@@ -1,0 +1,74 @@
+﻿@model RubricsystemModel.Model.Rubric
+
+@{
+    ViewData["Title"] = "CreateRubric";
+    Layout = "~/Views/Shared/_TeacherTheme.cshtml";
+}
+
+<div class="nk-content ">
+    <div class="container-fluid">
+        <div class="nk-content-inner">
+            <div class="nk-content-body">
+                <div class="components-preview wide-md mx-auto">
+
+                    <div class="nk-block nk-block-lg">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-head">
+                                    <h5 class="card-title">Rubric Info</h5>
+                                </div>
+                                <form asp-action="CreateRubric">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="row g-4">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="RubricName" class="form-label">Rubric Name</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="RubricName" class="form-control">
+                                                    <span asp-validation-for="RubricName" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Subjects" class="form-label">Subjects</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Subjects" class="form-control">
+                                                    <span asp-validation-for="Subjects" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="RubricClass" class="form-label">Rubric Class</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="RubricClass" class="form-control">
+                                                    <span asp-validation-for="RubricClass" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-lg btn-primary">Save Informations</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+

@@ -1,0 +1,268 @@
+﻿@model RubricsystemModel.Model.Answer
+
+@{
+    ViewData["Title"] = "GetPaper";
+    Layout = "~/Views/Shared/_TeacherTheme.cshtml";
+}
+
+
+<div class="nk-content ">
+    <div class="container-fluid">
+        <div class="nk-content-inner">
+            <div class="nk-content-body">
+                <div class="components-preview wide-md mx-auto">
+
+                    <div class="nk-block nk-block-lg">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-head">
+                                    <h5 class="card-title">Paper Info</h5>
+
+                                </div>
+
+
+                                <form method="post" asp-action="GetPaper">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                   
+                                    <div class="row g-4">
+                                        <input asp-for="AnswerId" class="form-control" type="hidden" />
+                                        <input asp-for="StudentId" class="form-control" type="hidden" />
+                                        <input asp-for="TeacherId" class="form-control" type="hidden" />
+                                        <input class="form-check-input" asp-for="IsSolved" type="hidden" />
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Class" class="form-label">Class</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Class" id="Class" name="Class" value="@Model.Paper.Class" class="form-control" readonly="readonly">
+                                                    <span asp-validation-for="Class" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <input asp-for="TeacherId" class="form-control" type="hidden" />
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label asp-for="Section" class="form-label">Section</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Section" id="Section" name="Section" value="@Model.Paper.Section" class="form-control" readonly="readonly">
+                                                    <span asp-validation-for="Section" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="font-weight-bold">Question 1 : @Model.Paper.Question1</p>
+                                            <div class="form-group">
+                                                <label asp-for="Answer1" class="form-label">Answer 1</label>
+                                                <div class="form-control-wrap">
+                                                    <textarea asp-for="Answer1" class="form-control" readonly="readonly">@Model.Answer1</textarea>
+                                                    <span asp-validation-for="Answer1" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label asp-for="Numbers1" class="form-label">Number</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Numbers1" class="form-control">
+                                                    <span asp-validation-for="Numbers1" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="font-weight-bold">Question 2 : @Model.Paper.Question2</p>
+                                            <div class="form-group">
+                                                <label asp-for="Answer2" class="form-label">Answer2</label>
+                                                <div class="form-control-wrap">
+                                                    <textarea asp-for="Answer2" class="form-control" readonly="readonly">@Model.Answer2</textarea>
+                                                    <span asp-validation-for="Answer2" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label asp-for="Number2" class="form-label">Number</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Number2" class="form-control">
+                                                    <span asp-validation-for="Number2" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="font-weight-bold">Question 3 : @Model.Paper.Question3</p>
+                                            <div class="form-group">
+                                                <label asp-for="Answer3" class="form-label">Answer3</label>
+                                                <div class="form-control-wrap">
+                                                    <textarea asp-for="Answer3" class="form-control" readonly="readonly">@Model.Answer3</textarea>
+                                                    <span asp-validation-for="Answer3" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label asp-for="Number3" class="form-label">Number</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Number3" class="form-control">
+                                                    <span asp-validation-for="Number3" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="font-weight-bold">Question 4 : @Model.Paper.Question4</p>
+                                            <div class="form-group">
+                                                <label asp-for="Answer4" class="form-label">Answer4</label>
+                                                <div class="form-control-wrap">
+                                                    <textarea asp-for="Answer4" class="form-control" readonly="readonly">@Model.Answer4</textarea>
+                                                    <span asp-validation-for="Answer4" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label asp-for="Number4" class="form-label">Number</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Number4" class="form-control">
+                                                    <span asp-validation-for="Number4" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="font-weight-bold">Question 5 : @Model.Paper.Question5</p>
+                                            <div class="form-group">
+                                                <label asp-for="Answer5" class="form-label">Answer5</label>
+                                                <div class="form-control-wrap">
+                                                    <textarea asp-for="Answer5" class="form-control" readonly="readonly">@Model.Answer5</textarea>
+                                                    <span asp-validation-for="Answer5" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label asp-for="Number5" class="form-label">Number</label>
+                                                <div class="form-control-wrap">
+                                                    <input asp-for="Number5" class="form-control">
+                                                    <span asp-validation-for="Number5" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" asp-for="IsChecked" /> @Html.DisplayNameFor(model => model.IsChecked)
+                                                </label>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-lg btn-primary">Save Informations</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+@*<h1>GetPaper</h1>
+
+    <h4>Answer</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="GetPaper">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Class" class="control-label"></label>
+                    <input asp-for="Class" class="form-control" />
+                    <span asp-validation-for="Class" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Section" class="control-label"></label>
+                    <input asp-for="Section" class="form-control" />
+                    <span asp-validation-for="Section" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Answer1" class="control-label"></label>
+                    <input asp-for="Answer1" class="form-control" />
+                    <span asp-validation-for="Answer1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Numbers1" class="control-label"></label>
+                    <input asp-for="Numbers1" class="form-control" />
+                    <span asp-validation-for="Numbers1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Answer2" class="control-label"></label>
+                    <input asp-for="Answer2" class="form-control" />
+                    <span asp-validation-for="Answer2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Number2" class="control-label"></label>
+                    <input asp-for="Number2" class="form-control" />
+                    <span asp-validation-for="Number2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Answer3" class="control-label"></label>
+                    <input asp-for="Answer3" class="form-control" />
+                    <span asp-validation-for="Answer3" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Number3" class="control-label"></label>
+                    <input asp-for="Number3" class="form-control" />
+                    <span asp-validation-for="Number3" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Answer4" class="control-label"></label>
+                    <input asp-for="Answer4" class="form-control" />
+                    <span asp-validation-for="Answer4" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Number4" class="control-label"></label>
+                    <input asp-for="Number4" class="form-control" />
+                    <span asp-validation-for="Number4" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Answer5" class="control-label"></label>
+                    <input asp-for="Answer5" class="form-control" />
+                    <span asp-validation-for="Answer5" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Number5" class="control-label"></label>
+                    <input asp-for="Number5" class="form-control" />
+                    <span asp-validation-for="Number5" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="IsSolved" /> @Html.DisplayNameFor(model => model.IsSolved)
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="IsChecked" /> @Html.DisplayNameFor(model => model.IsChecked)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TeacherId" class="control-label"></label>
+                    <input asp-for="TeacherId" class="form-control" />
+                    <span asp-validation-for="TeacherId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="StudentId" class="control-label"></label>
+                    <input asp-for="StudentId" class="form-control" />
+                    <span asp-validation-for="StudentId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PaperId" class="control-label"></label>
+                    <select asp-for="PaperId" class ="form-control" asp-items="ViewBag.PaperId"></select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>*@
+

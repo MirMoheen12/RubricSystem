@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "ShowNumber";
+    Layout = "~/Views/Shared/_StudentTheme.cshtml";
+}
+
+<div class="nk-content ">
+    <div class="container-fluid">
+        <div class="nk-content-inner">
+            <div class="nk-content-body">
+
+
+                <div class="jumbotron">
+                    @if (ViewBag.TotalNumber >= 0 )
+                    {
+                        <h5 class="text-center">You Have Got @ViewBag.TotalNumber Numbers </h5>
+                    }
+                    else
+                    {
+                        <h5 class="text-center">May be Paper in pending for Checking or May be paper not check yet</h5>
+                    }
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

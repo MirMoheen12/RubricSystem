@@ -1,0 +1,360 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Getlist</title>
+    <link rel="stylesheet" href="~/Theme/assets/css/dashlite.css">
+    <link id="skin-default" rel="stylesheet" href="~/Theme/assets/css/theme.css">
+</head>
+<body>
+    <form action="Getlist" method="post">
+
+        <table class="table table-bordered" width="100%">
+            <thead>
+                <tr>
+
+                    <th> Category </th>
+                    <th> Number </th>
+                    <th> Subcategory </th>
+                    <th> head 1 </th>
+                    <th> head 2 </th>
+                    <th> head 3 </th>
+                    <th> head 4 </th>
+                    <th> head 5 </th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td class="font-weight-bold" rowspan="2" style="vertical-align:middle">
+                        @ViewBag.cat[0].CategoryName
+                    </td>
+                    <td>
+                        1
+                    </td>
+                    <td class="font-weight-bold">
+                        @ViewBag.subcat[0].SubcategoryName
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td>
+                        2
+                    </td>
+                    <td class="font-weight-bold">
+                        @ViewBag.subcat[1].SubcategoryName
+                    </td>
+                  
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td class="font-weight-bold" rowspan="5" style="vertical-align:middle">
+                        @ViewBag.cat[1].CategoryName
+                    </td>
+                    <td>
+                        3
+                    </td>
+                    <td class="font-weight-bold">
+                        @ViewBag.subcat[2].SubcategoryName
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="font-weight-bold">
+                        @ViewBag.subcat[3].SubcategoryName
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    @*<td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>*@
+                   
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="font-weight-bold">
+                        @ViewBag.subcat[4].SubcategoryName
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    @*<td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>*@
+                   
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="font-weight-bold">
+                        @ViewBag.subcat[5].SubcategoryName
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    @*<td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>*@
+                    
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="font-weight-bold">
+                        @ViewBag.subcat[6].SubcategoryName
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    @*<td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>*@
+
+                </tr>
+                <tr>
+                    <td class="font-weight-bold" rowspan="3" style="vertical-align:middle">
+                        @ViewBag.cat[2].CategoryName
+                    </td>
+                    <td>8</td>
+                    <td class="font-weight-bold">
+                        @ViewBag.subcat[7].SubcategoryName
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="font-weight-bold">
+                        @ViewBag.subcat[8].SubcategoryName
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    @*<td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>*@
+
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="font-weight-bold">
+                        @ViewBag.subcat[9].SubcategoryName
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    @*<td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>*@
+
+                </tr>
+                <tr>
+                    <td class="font-weight-bold" rowspan="2" style="vertical-align:middle">
+                        @ViewBag.cat[3].CategoryName
+                    </td>
+                    <td>11</td>
+                    <td class="font-weight-bold">
+                        @ViewBag.subcat[10].SubcategoryName
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="font-weight-bold">
+                        @ViewBag.subcat[11].SubcategoryName
+                    </td>
+                  
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                    <td style="width:40px;">
+                        <textarea name="SubcatAns1[]" style="width:auto"></textarea>
+                    </td>
+                   
+                </tr>
+
+
+
+
+
+
+
+            </tbody>
+
+
+        </table>
+        <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+
+
+    <script src="~/Theme/assets/js/bundle.js?ver=2.8.0"></script>
+    <script src="~/Theme/assets/js/scripts.js?ver=2.8.0"></script>
+    <script src="~/Theme/assets/js/charts/gd-default.js?ver=2.8.0"></script>
+    @*@await RenderSectionAsync("Scripts", required: false)*@
+</body>
+</html>

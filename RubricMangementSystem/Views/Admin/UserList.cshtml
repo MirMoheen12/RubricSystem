@@ -1,0 +1,116 @@
+﻿@model IEnumerable<RubricsystemModel.Model.ApplicationUser>
+@{
+    ViewData["Title"] = "UserList";
+    Layout = "~/Views/Shared/_AdminTheme.cshtml";
+}
+
+<div class="nk-content ">
+    <div class="container-fluid">
+        <div class="nk-content-inner">
+            <div class="nk-content-body">
+                <div class="nk-block-head nk-block-head-sm">
+                    <div class="nk-block-between">
+                        <div class="nk-block-head-content">
+                            <h3 class="nk-block-title page-title">Users Lists</h3>
+                            <div class="nk-block-des text-soft">
+                                <p>You have total @Model.Count() users.</p>
+                            </div>
+                        </div><!-- .nk-block-head-content -->
+                        <div class="nk-block-head-content">
+                            <div class="toggle-wrap nk-block-tools-toggle">
+                                <a href="#" class="btn btn-icon btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em class="icon ni ni-menu-alt-r"></em></a>
+                                <div class="toggle-expand-content" data-content="pageMenu">
+                                    <ul class="nk-block-tools g-3">
+                                        <li><a href="#" class="btn btn-white btn-outline-light"><em class="icon ni ni-download-cloud"></em><span>Export</span></a></li>
+                                        <li class="nk-block-tools-opt">
+                                            <div class="drodown">
+                                                <a href="#" class="dropdown-toggle btn btn-icon btn-primary" data-toggle="dropdown"><em class="icon ni ni-plus"></em></a>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <ul class="link-list-opt no-bdr">
+                                                        <li><a href="#"><span>Add User</span></a></li>
+                                                        <li><a href="#"><span>Add Team</span></a></li>
+                                                        <li><a href="#"><span>Import User</span></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!-- .toggle-wrap -->
+                        </div><!-- .nk-block-head-content -->
+                    </div><!-- .nk-block-between -->
+                </div>
+
+
+                <div class="card card-preview">
+                    <div class="card-inner">
+                        @if (ViewBag.okay == true)
+                            {
+                                <div class="example-alerts">
+                                    <div class="gy-4">
+                                        <div class="example-alert">
+                                            <div class="alert alert-success alert-icon alert-dismissible">
+                                                <em class="icon ni ni-check-circle"></em> <strong>Updated</strong> User Email Has Been Verified <button class="close" data-dismiss="alert"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        
+
+                        <table class="datatable-init table">
+                            <thead>
+                                <tr>
+
+                                    <th>User Name</th>
+                                    <th>Purpose</th>
+                                    <th>Email Confirmed</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td class="font-weight-bold">
+                                            @Html.DisplayFor(modelItem => item.UserName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Purpose)
+                                        </td>
+                                        @if (item.EmailConfirmed == true)
+                                        {
+                                            <td class="text-success">
+                                                Verified
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td class="text-danger">
+                                                Unverified
+                                            </td>
+                                        }
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.Id" data-toggle="tooltip" data-placement="top" title="Edit User"><em class="icon ni ni-edit"></em></a> |
+                                            <a asp-action="Delete" asp-route-id="@item.Id" data-toggle="tooltip" data-placement="top" title="Delete User"><em class="icon ni ni-delete"></em></a> |
+                                            @if (item.EmailConfirmed != true)
+                                            {
+                                                <a asp-action="Verify" asp-route-id="@item.Id" data-toggle="tooltip" data-placement="top" title="Verify User"><em class="icon ni ni-account-setting-alt"></em></a>
+                                            }
+
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div><!-- .card-preview -->
+            </div> <!-- nk-block -->
+            <!-- nk-block -->
+
+        </div><!-- .components-preview -->
+    </div>
+</div>
+
+
